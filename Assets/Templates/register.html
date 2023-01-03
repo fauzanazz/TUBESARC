@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block Content %}
+<div class="container">
+    <h1 class="Title">Sign Up</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        
+        <label for="Username">Username</label>
+        <input type="text" placeholder="Username" name="username" id="user">
+        
+        <label for="Email">Email</label>
+        <input type="text" placeholder="Email or Phone" name="email" id="email">
+        
+        <label for="password1">Password</label>
+        <input type="text" placeholder="Password" name="password1" id="password1">
+        
+        <label for="password2">Password</label>
+        <input type="text" placeholder="Confirm Password" name="password2" id="password2">
+        <button type="submit">Signup</button>
+
+        <a href="{% url 'login' %}">I already have an account</a>
+    </form>
+</div>
+{% endblock Content %}

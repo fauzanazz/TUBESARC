@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block Content %}
+    <div class="container">
+        <h1 class="title">Masuk ke akun anda</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="container">
+                <label for="Username">Username</label>
+                <input type="text" placeholder="Username" id="username" name="user">
+        
+                <label for="password">Password</label>
+                <input type="password" placeholder="Password" id="password" name="pass">
+
+                <button type="submit" class="btn-createAcc">Log In</button>
+                <a href="{% url 'signup' %}" class="createAcc">Create account</a>
+            </div>
+        </form>
+    </div>
+{% endblock Content}
