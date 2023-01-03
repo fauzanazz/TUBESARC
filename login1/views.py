@@ -19,7 +19,7 @@ def signuppage(request):
             myuser.save()
             return redirect('login')
 
-    return render (request,'signuppage.html')
+    return render (request,'register.html')
 
 
 def loginpage(request):
@@ -36,12 +36,12 @@ def loginpage(request):
         else:
             return HttpResponse("Username or Password is incorrect!")
 
-    return render (request,'loginpage.html')
+    return render (request,'login.html')
 
 @login_required(login_url='login')
 def homepage(request):
     # return HttpResponse("Hello world!")
-    return render (request,'homepage.html')
+    return render (request,'index.html')
 
 
 def Logout(request):
