@@ -1,4 +1,13 @@
 {% extends "Base.html" %}
 
-{% block Content %}
-{% endblock Content %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+
+{% block content %}
+<div class="container">
+    <div class="content"></div>
+    <p>Halo</p>
+
+</div>
+{% endblock content %}

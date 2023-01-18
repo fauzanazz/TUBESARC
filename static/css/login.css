@@ -1,3 +1,12 @@
-body {
-    background-color: green;
+h1.title {
+    color: aliceblue;
+    font-size: 10vh;
+    font-family: "gelatio";
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
