@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>NavBar</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <li class="Profile">
+                    <img src="{% static 'PP.png' %}" alt="">
+                <ul class="dropdown">
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Friends</a></li>
+                    <li><a href="#">YourFess</a></li>
+                    <li><a href="#">Setting</a></li>
+                </ul>
+            </li>
+        </div>
+        <div class="home">
+            <li>
+                <a href="#">
+                    <img src="{% static 'HOTFESS.png' %}" alt="">
+                </a>    
+            </li>
+        </div>
+        <div class="menu">
+            <ul class="nav-links">
+                <li class="search">
+                    <a href="#">
+                        <img src="{% static 'SEARCH-01.png' %}" alt="">
+                    </a>
+                </li>
+                <div></div>
+                <li class="dm">
+                    <a href="#">
+                        <img src="{% static 'DM-01.png' %}" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h1 style="color:aliceblue; margin-top: 80px ;">HOME PAGE</h1>
+    <a href="#" class="btn btn-primary">Logout</a>
+    <a href="#" class="btn btn-primary">Upload</a>
+</body>
+</html>
+
+
+
