@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<nav class="navbar" style="z-index: 999;">
+    <div class="logo">
+        <li class="Profile">
+            <img src="{% static 'PP.png' %}" alt="">
+            <ul class="dropdown" style="z-index: 999;">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Friends</a></li>
+                <li><a href="{% url 'yourfess' %}">YourFess</a></li>
+                <li><a href="#">Setting</a></li>
+            </ul>
+        </li>
+    </div>
+    <div class="home">
+        <li>
+            <a href="/">
+                <img src="{% static 'HOTFESS.png' %}" alt="">
+            </a>    
+        </li>
+    </div>
+    <div class="menu">
+        <ul class="nav-links">
+            <li class="search">
+                <a href="#">
+                    <img src="{% static 'SEARCH-01.png' %}" alt="">
+                </a>
+            </li>
+            <div></div>
+            <li class="dm">
+                <a href="#">
+                    <img src="{% static 'DM-01.png' %}" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<head>
+    <title>YourFess</title>
+</head>
+<body>
+    {% block body %}         
+    <div id="history" class="card" style="z-index: 1; margin-top: 80px;">
+        <div class="card-body">
+            {% for x in history %}
+                <ul style="z-index: 1;">
+                    <li class="card" style="color: aliceblue; padding: 10px;"> 
+                        <div class="card-body" style="z-index: 1;">
+                            <h5 class="card-title">{{ x.user }}</h5> 
+                            <h6 class="card-subtitle text-muted">{{ x.created_at }}</h6>
+                            <h3 class="card-text">{{ x.caption }}</h3>
+                        </div>
+                    </li>
+                </ul>
+            {% empty %}
+                <h6>No Post Available</h6>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>
